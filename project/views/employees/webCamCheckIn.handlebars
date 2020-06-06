@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/styles/sweetalert.css">
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo-header">
+      <a href="/"><img src="/imgs/FaceInLogo.png"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><button type="button" id="checkInButton">Check In / Check out</button></li>
+      </ul>
+    </nav>
+    <div class="container" id="capture">
+      <video id="video" width="720" height="560" autoplay muted></video>
+    </div>
+    <ul id="example-list" class="list-group">
+      {{#each examples}}
+      <li data-id="{{this.id}}" class="list-group-item">
+        <a href="example/{{this.id}}">{{this.text}}</a>
+        <button class="btn btn-danger float-right delete">ｘ</button>
+      </li>
+      {{/each}}
+    </ul>
+  </header>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="copyright">&copy; nono </p>
+  </footer>
+
+</div>
+
+<script src="/js/index.js"></script>
+<script src="/js/face-api.min.js"></script>
+<script src="/js/popupS.js"></script>
+<script src="/js/faceRecogniser.js"></script>
+<link rel="stylesheet" href="https://github.com/ChiefORZ/popupS/blob/HEAD/css/popupS.css">
+<script src="https://github.com/ChiefORZ/popupS/blob/HEAD/dist/popupS.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+{{!-- <script src="/js/imageProcessor.js"></script> --}}

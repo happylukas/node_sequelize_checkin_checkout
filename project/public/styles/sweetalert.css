@@ -1,0 +1,9 @@
+.swal2-styled {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+}
+
+.swal2-content b {
+    color: black;
+}

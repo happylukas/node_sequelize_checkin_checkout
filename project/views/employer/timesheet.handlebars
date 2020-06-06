@@ -1,0 +1,52 @@
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo-header">
+      <a href="/"><img src="/imgs/FaceInLogo.png"></a>
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1 >TEXT</h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        
+        
+        <li><button onclick="exportTableToCSV('timesheet.csv')"> Export</button></li>
+      </ul>
+    </nav>
+    <div>
+    <table class="table table-hover" id="timesheet-table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Time in</th>
+          <th scope="col">Time out</th>
+        </tr>
+      </thead>
+      <tbody id="table_body"></tbody>
+    </table>
+    </div>
+  </header>
+  <!-- Main -->
+  <div id="main">
+
+    
+    </article>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="copyright">&copy; Nono647 </p>
+  </footer>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/addEmployee.js"></script>
+<script src="/js/timesheet.js"></script>

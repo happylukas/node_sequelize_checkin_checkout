@@ -1,0 +1,103 @@
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo-header">
+      <a href="/"><img src="/imgs/FaceInLogo.png"></a>
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1>Bienvenue </h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#login">Manager</a></li>
+        <li><a href="#register">Création Manager</a></li>
+        <li><a href="/employees/dashboard">Employé</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <div id="main">
+
+    <!-- Login -->
+    <article id="login">
+      <h2 class="major">Connexion</h2>
+      <form class="login">
+        <div class="fields">
+          <div class="field">
+            <label for="employerLoginEmail">Address Email</label>
+            <input type="email" class="form-control" id="employerLoginEmail" placeholder="Email">
+          </div>
+          <div class="field">
+            <label for="employerLoginPassword">Password</label>
+            <input type="password" class="form-control" id="employerLoginPassword" placeholder="Mot de Passe">
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Login" class="primary" id="loginbutton" /></li>
+        </ul>
+      </form>
+      <div id="loginAlert" class="alert alert-danger invisible" role="alert">
+        Incorrect email or password
+      </div>
+    </article>
+
+
+    <!-- Register -->
+    <article id="register">
+      <h2 class="major">Création Manager</h2>
+      <form class="form-signin"
+        oninput='confirmationPassword.setCustomValidity(confirmationPassword.value != employerPassword.value ? "Passwords do not match." : "")'>
+        <div class="fields">
+          <div class="field half">
+            <label for="employerName" class="sr-only">Name</label>
+            <input type="text" id="employerName" name="name" class="form-control" placeholder="Nom" required>
+          </div>
+          <div class="field half">
+            <label for="employerCompanyName" class="sr-only">Position</label>
+            <input type="text" id="employerCompanyName" name="companyname" class="form-control"
+              placeholder="Position">
+          </div>
+          <div class="field half">
+            <label for="employerEmail" class="sr-only">Email address</label>
+            <input type="email" id="employerEmail" name="email" class="form-control" placeholder="Adresse Email"
+              required autofocus>
+          </div>
+          <div class="field half">
+            <label for="employerPassword" class="sr-only">Mot de Passe</label>
+            <input type="password" id="employerPassword" name="password" class="form-control" placeholder="Mot de Passe"
+              required>
+          </div>
+          <div class="field half">
+            <label for="inputConfirmPassword" class="sr-only">Confirmation Mot de Passe</label>
+            <input type="password" id="inputConfirmPassword" name="confirmationPassword" class="form-control"
+              placeholder="Confirmez Votre Mot de Passe" required>
+
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Enregister" class="primary" id="signup" /></li>
+        </ul>
+      </form>
+      <div id="emailtaken" class="alert alert-danger invisible" role="alert">
+        Email déja utilisée!
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="copyright">&copy; Nono647 </p>
+  </footer>
+
+</div>
+
+
+{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+<script src="/js/index.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>

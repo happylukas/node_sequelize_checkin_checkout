@@ -1,0 +1,90 @@
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo-header">
+      <a href="/"><img src="/imgs/FaceInLogo.png"></a>
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1 class="employer-name"></h1>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#addnew">Add New</a></li>
+        <li><a href="/employer/logout">Logout</a></li>
+        <li><button onclick="exportTableToCSV('members.csv')">Export</button></li>
+      </ul>
+    </nav>
+    <table class="table table-hover table-sm" id="train-table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </header>
+
+  <!-- Main -->
+  <div id="main">
+
+    <!-- Login -->
+    <article id="addnew">
+      <h2 class="major">Add New Employee</h2>
+      <form id="add-form" class="form-addAnEmployee m-2">
+        <div class="fields">
+          <div class="field half">
+            <label for="employeeName">Employee Name</label>
+            <input type="Text" class="form-control" id="employeeName" placeholder="Nom de l'employee" required />
+          </div>
+          <div class="field half">
+            <label for="employeeDepartment">Employee Department</label>
+            <input type="Text" class="form-control" id="employeeDepartment" placeholder="Affecté(e) au service"
+              required />
+          </div>
+          <div class="field half">
+            <label for="employeePosition">Employee Position</label>
+            <input type="Text" class="form-control" id="employeePosition" placeholder="Emploie Occupé"
+              required />
+          </div>
+          <div class="field half">
+            <label for="employeeAddress">Employee Address</label>
+            <input type="Text" class="form-control" id="employeeAddress" placeholder="Adresse email employé(e)" required />
+          </div>
+          <div class="field half">
+            <label for="employeeContactNumber">Employee Contact Number</label>
+            <input type="Text" class="form-control" id="employeeContactNumber"
+              placeholder="Enter Employee Contact Number" required />
+          </div>
+          <div class="field half">
+            <label for="employeeDOB">Employee Date of Birth</label>
+            <input type="Text" class="form-control" id="employeeDOB" placeholder="Date de naissance employé(e) " required />
+          </div>
+          <div class="field">
+            <label for="employeeImage">Img employé(e) Image</label>
+            <input type="Text" class="form-control" id="employeeImage" placeholder="img employé(e)"
+              required />
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="Créer" class="primary" id="addEmployeeBtn" /></li>
+        </ul>
+      </form>
+    </article>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="copyright">&copy; Nono647 </p>
+  </footer>
+
+</div>
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/addEmployee.js"></script>
